@@ -14,8 +14,6 @@
 #include "hardware/clocks.h"
 #include "hardware/adc.h"  // adc
 
-#include "ring.h"
-
 #include <stdlib.h>
 
 #define AUDIO_OUT_PIN 26
