@@ -25,7 +25,7 @@
 #define DATA_LENGTH SAMPLE_RATE*2 // WAV_DATA_LENGTH //16000
 #define FREQ 11000
 
-char audio[DATA_LENGTH];
+volatile char audio[DATA_LENGTH];
 
 volatile int wav_position = 0;
 volatile int recording = 0;
@@ -34,7 +34,7 @@ SemaphoreHandle_t xSemaphorePlayInit;
 SemaphoreHandle_t xSemaphorePlayDone;
 SemaphoreHandle_t xSemaphoreRecordDone;
 
-int audio_pin_slice;
+volatile int audio_pin_slice;
 
 /*
  * PWM Interrupt Handler which outputs PWM level and advances the
