@@ -103,7 +103,7 @@ void mic_task() {
     int timer_0_hz = 11000; 
     repeating_timer_t timer_0;
 
-    int buffer_size = 32, i = 0, filtered_val;
+    int buffer_size = 32, i = 0;
     int buffer[buffer_size];
 
     for(int k = 0; k<buffer_size ; k++) buffer[k] = 0;
@@ -116,7 +116,7 @@ void mic_task() {
         i = (i+1)%buffer_size;
         
         
-        filtered_val = 0;
+        int filtered_val = 0;
         for(int k = 0; k<buffer_size ; k++) filtered_val += buffer[k];
         filtered_val = filtered_val/buffer_size;
 
