@@ -27,7 +27,7 @@
 
 char audio[DATA_LENGTH];
 
-int wav_position = 0;
+volatile int wav_position = 0;
 volatile int recording = 0;
 
 SemaphoreHandle_t xSemaphorePlayInit;
